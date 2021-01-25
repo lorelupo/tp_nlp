@@ -86,7 +86,7 @@ Vous rendrez votre TP sous forme d'un fichier PDF `tp_intro_nom1_nom2.pdf` conte
 Exercices
 ---------
 
-###Exercice 0
+### Exercice 0
 **--- Transformer tout le texte RADIOS.txt en majuscules**
 
 - **Q1** : Trouver une commande qui accomplit la tâche
