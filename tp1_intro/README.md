@@ -73,8 +73,7 @@ Exercices
 ### Exercice 0
 **--- Transformer tout le texte RADIOS.txt en majuscules**
 
-- **Q1** : Trouver une commande qui accomplit la tâche
-- **Q2** : Trouver une commande qui prenne en compte les caractères accentués
+- **Q1** : Trouver une commande qui accomplit la tâche (pensez à bien gérer les accents)
 
 ### Exercice 1
 **--- Trouver la suite d'instructions qui permet de compter les mots dans un texte**
@@ -102,9 +101,9 @@ Exemples (voir la page `man` de `sort`):
 |`sort -k 0.50`| commencer au 50e caractère|
 |`sort -k 1.5`| commencer au 5e caractère du champ 1|
 
- - **Q1** : Trier les mots de RADIO.txt par fréquence d'apparition
-- **Q2** : Trier les mots de RADIO.txt par ordre alphabétique
-- **Q3** : Trier les mots de RADIO.txt par ordre "rhymique" (exemple, mettre ensemble tous les mots qui finissent par "-ment".
+ - **Q1** : Trier les mots de RADIO.hist par fréquence d'apparition
+- **Q2** : Trier les mots de RADIO.hist par ordre alphabétique
+- **Q3** : Trier les mots de RADIO.hist par ordre "rhymique" (exemple, mettre ensemble tous les mots qui finissent par "-ment".
 
 **Aide** : utiliser la commande unix `rev`
 
