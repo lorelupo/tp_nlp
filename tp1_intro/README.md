@@ -2,6 +2,22 @@
 
 > Une partie de ce TP est très largement inspiré de "Unix for Poets" de Kenneth Ward Church, IBM Research. _Adapté par Laurent Besacier et Carlos Ramisch_
 
+Programme
+---------
+
+1. Compter les mots dans un texte
+2. Ordonner une liste de mots par
+
+    - ordre "ASCII"
+    - ordre alphabétique
+
+3. Calculer des statistiques d’occurrences et de co-occurrences
+4. Extraire une information utile d'un dictionnaire
+5. Extraire une information utile d'un texte
+5. Transformer un texte
+10. Calculer des mesures d'association entre les mots
+11. Comprendre le fonctionnement de UNICODE
+12. Reconnaître et manipuler les encodages des fichier de texte
 
 Outils
 ------
