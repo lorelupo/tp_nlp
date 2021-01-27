@@ -81,7 +81,7 @@ Exercices
 - Entrée : fichier texte RADIOS.txt
 - Sortie : liste de mots avec leur nombre d'apparitions dans le texte (RADIOS.hist)
 
-**Aide** : utiliser `tr`, `sort` et `uniq`, `penser` à "piper" (`|`) les instructions
+**Aide** : utiliser `tr`, `sort` et `uniq`, penser à "piper" (`|`) les instructions
 
 - **Q1** : Quel est le mot qui apparaît exactement 1732 fois dans ce texte ?
 - **Q2** : Combien de fois le mot "orange" apparaît dans ce texte ?
