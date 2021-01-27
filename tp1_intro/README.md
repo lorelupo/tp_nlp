@@ -101,7 +101,7 @@ Exemples (voir la page `man` de `sort`):
 |`sort -k 0.50`| commencer au 50e caractère|
 |`sort -k 1.5`| commencer au 5e caractère du champ 1|
 
- - **Q1** : Trier les mots de RADIO.hist par fréquence d'apparition
+ - **Q1** : Trier les mots de RADIO.hist (sortie de l'Ex.1) par fréquence d'apparition
 - **Q2** : Trier les mots de RADIO.hist par ordre alphabétique
 - **Q3** : Trier les mots de RADIO.hist par ordre "rhymique" (exemple, mettre ensemble tous les mots qui finissent par "-ment".
 
