@@ -1,0 +1,9 @@
+// Load French lexicon
+loadin(_current+'lexicon_french.tmg');
+
+// Simple Prolog Grammar
+string sentiment = @"
+    a_positif ← #positif+.
+    a_neutre ← #neutre+.
+    a_negatif ← #negatif+.
+"@;

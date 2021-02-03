@@ -1,0 +1,16 @@
+@neutre ← ok.
+@neutre ← passable.
+@neutre ← moyen.
+@neutre ← correct.
+
+@negatif ← médiocre.
+@negatif ← mauvais.
+
+@positif ← bien.
+@positif ← génial.
+@positif ← extraordinaire.
+@positif ← excellent.
+@positif ← super.
+@positif ← bon.
+
+@qualite ← qualité.

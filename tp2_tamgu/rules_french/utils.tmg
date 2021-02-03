@@ -1,0 +1,3 @@
+// [Q4] Ecrivez une fonction readFile qui prend comme argument d’entrée un chemin vers un 
+// fichier et renvoie une table de hashage (équivalent à un dictionnaire en Python) 
+// ayant pour clef l’identifiant de l’avis client et pour valeur le texte de l’avis client.

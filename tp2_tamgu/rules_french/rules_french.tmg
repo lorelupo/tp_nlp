@@ -1,0 +1,34 @@
+if (_args.size() == 0){
+    println("#\n#\tUsage: tamgu rules_french.tmg review_file.txt\n#");
+    _exit();
+}
+
+
+// Import utility functions
+tamgu utils(_current+'utils.tmg');
+loadin(_current+'annotation_rules_french.tmg');
+
+// Load Data
+map data;
+data = utils.readFile(_current+_args[0]);
+
+
+// [Q5] Declare an annotator which will be using rules found in annotation_rules_french
+// [Q5] ICI
+
+
+// Iterate over data
+string review_key;
+string review_txt;
+for (self review in data.keys()){
+    review_key = review;
+    review_txt = data[review_key];
+
+    println(review_key+"\n");
+    println(review_txt);
+
+    // [Q6] ICI
+    // [Q6] ICI
+
+    println('-----------');
+}
