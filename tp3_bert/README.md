@@ -5,8 +5,9 @@ Les exercices de ce TP, les instructions et le code sont entièrement contenus d
 ## Méthode 1: Google Colab
 
 - Inscrivez-vous à Google Colab (si vous n'avez pas déjà de compte Google) et demandez l’accès.
-- Sinon, vous pouvez ouvrir un nouveau fichier Colab depuis [votre compte Google Drive](https://drive.google.com/drive/my-drive) en cliquant sur `+ New->More->Google Colaboratory`
+- Vous pouvez ouvrir un nouveau fichier Colab depuis [votre compte Google Drive](https://drive.google.com/drive/my-drive) en cliquant sur `+ New->More->Google Colaboratory`
 - Une fois que vous avez obtenu l'accès à un fichier Colab, vous pouvez télécharger un Notebook en utilisant `fichier->Upload Notebook`. Téléchargez le fichier `tp_bert.ipynb`.
+- Autrement, en tapent `Ctrl + O` (ou dans les options `File->Open`) vous pouvez télecharger une copie du Notebook present sur le répertoire GitHub.
 - Pour activer l’utilisation de GPU pour votre notebook: `Runtime->Change runtime type->Hardware Accelerator->GPU` .
 
 ## Méthode 2: conda environment
