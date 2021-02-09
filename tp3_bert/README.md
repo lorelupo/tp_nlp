@@ -27,3 +27,10 @@ pip install tensorboardX
 ````
 
 Maintenant, vous pouvez ouvrir `tp_bert.ipynb`, il suffit de lancer la commande `jupyter notebook` dans le répertoire de travail.
+
+---
+## À Rendre
+
+Chaque exercice de ce TP prévoit une réponse sous forme textuelle ou de code. Toute réponse doit être écrite dans `tp_bert.ipynb`, dans une ou plusieurs cellules sous-jacentes l’énoncé de chaque exercice.
+
+Vous rendrez un répertoire compressé `tp_bert_nom1_nom2.zip` avec le contenu du répertoire `tp_bert.zip` dont le fichier `tp_bert.ipynb` aura été mis à jour avec vos réponses.
