@@ -97,7 +97,7 @@ de steps ? comment utiliser l'option `early_stopping` ([voir ici](https://opennm
 - **Q12 - nombre d'unités** : Faites varier le nombre d’unités pour l’encoder et le décodeur (n’allez pas au delà de 512.
 Obtenez-vous de meilleurs résultats ? Pourquoi ?
 
-- **Q13 - attention** : Les architectures avec mécanismes d’attention sont devenus la norme dans de nombreuses applications comme la traduction, la reconnaissance de la parole, la description d’image, etc. ([cet article de blog constitue une excellente introduction en la matière](https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html)). Ajouter un mécanisme d’attention en changeant le paramètre de _global_attention_ dans le fichier de configuration en le passant de _none_ à _mlp_. Observez-vous un gain de performance ? Pourquoi ? Comment-est ce que c'est mécanisme fonctionne ?
+- **Q13 - attention [OPTIONNEL]** : Les architectures avec mécanismes d’attention sont devenus la norme dans de nombreuses applications comme la traduction, la reconnaissance de la parole, la description d’image, etc. ([cet article de blog constitue une excellente introduction en la matière](https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html)). Ajouter un mécanisme d’attention en changeant le paramètre de _global_attention_ dans le fichier de configuration en le passant de _none_ à _mlp_. Observez-vous un gain de performance ? Pourquoi ? Comment-est ce que c'est mécanisme fonctionne ?
 
 La qualité des traductions générées par un système de traduction automatique dépend aussi de certains paramètres au décodage (`onmt_translate`). L’un d’eux est le **beam search**.
 
