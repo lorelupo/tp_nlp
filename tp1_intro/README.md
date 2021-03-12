@@ -81,7 +81,7 @@ Exercices
 - Entrée : fichier texte RADIOS.txt
 - Sortie : liste de mots avec leur nombre d'apparitions dans le texte (RADIOS.hist)
 
-**Aide** : utiliser `tr`, `sort` et `uniq`, penser à "piper" (`|`) les instructions
+**Aide** : utiliser `tr`, `sort` et `uniq`, `penser` à "piper" (`|`) les instructions
 
 - **Q1** : Quel est le mot qui apparaît exactement 1732 fois dans ce texte ?
 - **Q2** : Combien de fois le mot "orange" apparaît dans ce texte ?
@@ -101,14 +101,14 @@ Exemples (voir la page `man` de `sort`):
 |`sort -k 0.50`| commencer au 50e caractère|
 |`sort -k 1.5`| commencer au 5e caractère du champ 1|
 
- - **Q1** : Trier les mots de RADIO.hist (sortie de l'Ex.1) par fréquence d'apparition
-- **Q2** : Trier les mots de RADIO.hist par ordre alphabétique
-- **Q3** : Trier les mots de RADIO.hist par ordre "rhymique" (exemple, mettre ensemble tous les mots qui finissent par "-ment".
+ - **Q1** : Trier les mots de RADIOS.hist (sortie Ex.1) par fréquence d'apparition
+- **Q2** : Trier les mots de RADIOS.hist par ordre alphabétique
+- **Q3** : Trier les mots de RADIOS.hist par ordre "rhymique" (exemple, mettre ensemble tous les mots qui finissent par "-ment".
 
 **Aide** : utiliser la commande unix `rev`
 
 ### Exercice 3
-**--- Trouver et compter tous les bigrammes du texte RADIOS.txt**
+**--- Trouver et compter les n-grammes du texte RADIOS.txt**
 
 - Entrée : fichier texte RADIOS.txt
 - Sortie : fichier de statistiques où chaque ligne est de la forme "mot1 mot2 nb"
@@ -162,7 +162,7 @@ Avec expressions régulières:
 **Note** : outils différents (`grep`, `sed`, etc.) ont différents caractères d'échappement (e.g. `;'"#$&*?[]<>{}\`). Pour utiliser ces caractères dans des regex, il faut placer `\` avant. E.g. `\{` pour utiliser `{`.
 
 - **Q1** : Combien y a-t-il de mots de 9 lettres dans RADIOS.txt ?
-- **Q2** : Y a-t-il des mots sans voyelle dans RADIOS.txt ?
+- **Q2** :  Combien y a-t-il des mots sans voyelle dans RADIOS.txt ?
 
 ### Exercice 5 [Optionnel]
 **--- Langage `awk`**
@@ -193,8 +193,16 @@ L'outil `sed` permet de remplacer du texte à l'aide d'expressions régulières.
 
 **Suggestion**: on peut éviter d'échapper les caractères comme `()` avec l'option `-E`. E.g. `sed -E 's/([^ ]*)ation /\U\1ATION /g'` == `sed 's/\([^ ]*\)ation /\U\1ATION /g'`.
 
-- **Q1** : Rajouter un point final à chaque ligne et mettre la première lettre en majuscule.
-- **Q2** : Remplacer toute occurrence de deux mots identiques consécutifs par une seule occurrence de ce mot, par exemple, "de de" devient "de".
+- **Q1** : Rajouter un point final à chaque ligne de RADIOS.txt et mettre la première lettre en majuscule.
+- **Q2** : Remplacer toute occurrence de deux mots identiques consécutifs dans RADIOS.txt par une seule occurrence de ce mot, par exemple, "de de" devient "de". Pour tester votre commande, utilisez:
+
+  ```
+  echo "there there there are multiple multiple lexical errors in this line line . ." | votrecommande
+  ```
+  qui devrait donner la phrase suivante à la sortie:
+  ```
+  there are multiple lexical errors in this line .
+  ```
 
 ### Exercice 7 [Optionnel]
 
@@ -244,7 +252,7 @@ Comparer les différentes couches d'Unicode pour le fichier _testFR.txt.utf8_, e
 Questions:
 
 - **Q1** : Que représente le code hexadécimal 0A ?
-- **Q2** : Combien d'octets sont nécessaires pour représenter le mot "deçà" en UTF-8 ? Quelle est la représentation de ce mot en hexadécimal ?
+- **Q2** : Combien d'octets sont nécessaires pour représenter le mot "déçà" en UTF-8 ? Quelle est la représentation de ce mot en hexadécimal ?
 - **Q3** : En UTF-8, quels sont les glyphes représentés par la séquence hexadécimale "47 72 C3 BC C3 9F 65" ? Combien d'octets sont requis pour représenter chaque glyphe ?
 - **Q4** : Quel est l'encodage utilisé pour le fichier testEN.txt ? Ouvrez le dans vi(m) en faisant en sorte qu'il soit lu comme un fichier UTF-8. Qu'en déduisez vous sur la compatibilité entre UTF-8 et l'encodage utilisé de base ? Pourquoi ?
 
@@ -269,6 +277,6 @@ Comparer les fichiers _testFR.txt.utf8_ et _testFR.txt.iso8859-1_
 
 Convertir le fichier _testFR.txt.utf8_ en UTF-16 avec `iconv`. Visualiser le changement avec `xxd`.
 
-- **Q1** : À quoi correspondent les deux premiers octets dans le fichier converti en UTF-16 ?
+- **Q1** : À quoi correspondent les deux premiers octets dans le fichier converti en UTF-16 ? (attention, ce n'est pas un charactère)
 -  **Q2** : Quelle est la correspondance entre les codes point Unicode et leur représentation en UTF-16 ?
 -  **Q3** : Essayez maintenant de réaliser la conversion vers UTF-16BE. Quelle est la différence entre cet encodage et UTF-16 ?
