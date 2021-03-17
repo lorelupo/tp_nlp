@@ -28,7 +28,7 @@ Installez OpenNMT-py à l’aide de pip : `pip install OpenNMT-py`
 
 - **Q1** : Que contiennent les fichiers _IWSLT10_BTEC.train.en.txt_ et _IWSLT10_BTEC.train.fr.txt_ ?
 - **Q2** : Pour chacun des fichiers dans les répertoires train, dev et test, exécutez la commande suivante : `cat file_in.txt | awk -F '\' '{print $NF}' > file_out.clean.txt`. Pour chaque fichier clean créé, exécutez la commande suivante (en changeant LANG par en ou fr selon la langue dans laquelle est le fichier) : `tokenizer.perl -l LANG -lc < ./file_in.LANG.clean.txt > file_out.LANG.tok.txt`. Quelles différences voyez-vous entre les fichiers _.clean.txt_ et _.tok.txt_ ? Quel est l’intérêt de l’opération effectuée ?
-- **Q3**  Pourquoi avoir un corpus séparé en 3 parties (train, dev et val) ? A quoi vont servir chacun de ces fichiers ?
+- **Q3** : Pourquoi avoir un corpus séparé en 3 parties (train, dev et val) ? A quoi vont servir chacun de ces fichiers ?
 
 ## Création d’un modèle de TA
 
