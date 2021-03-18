@@ -70,7 +70,7 @@ Dites à quoi correspondent les paramètres suivants (vous pouvez utiliser inter
 Lors de l’entraînement, le script a sauvegardé plusieurs modèles dans le répertoire spécifié dans le fichier de configuration.
 Faites traduire le fichier de test _IWSLT09_BTEC.testset.fr.tok.txt_ par chacun des modèles sauvegardés et conservez chaque fichier de traduction généré avec un nom unique.
 
-`onmt_translate -model VOTRE_MODELE.pt -src IWSLT09_BTEC.testset.fr.tok.txt -output pred.txt  -replace_unk -verbose`
+`onmt_translate -model VOTRE_MODELE.pt -src IWSLT09_BTEC.testset.fr.tok.txt -output pred.txt`
 
 En pratique, il n’est pas possible d’évaluer les traductions manuellement, ainsi des métriques automatiques ont été développées pour évaluer les traductions de manière automatique. L’une de ces métrique s’appelle BLEU.
 
