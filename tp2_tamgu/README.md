@@ -1,11 +1,10 @@
-# TP Tamgu
+# TP Analyse de sentiments avec Tamgu
 
 ----
 
 ## Installation de TAMGU
 
-En cas de problème, référez-vous à la documentation disponible à l'adresse suivante
-https://github.com/naver/tamgu/blob/master/README.md#compiling
+Ce TP est basé sur le language de programmation [Tamgu]([Optionnel]), à installer sur votre machine avant de commencer. En cas de problème dans l'installation, référez-vous à la [documentation disponible](https://github.com/naver/tamgu/blob/master/README.md#compiling).
 
 1) Téléchargez et compilez Tamgu
 
@@ -79,17 +78,31 @@ Pensez à consulter la documentation de Tamgu pour répondre au mieux aux questi
     - Q2.1 Quelle est la signification de la ligne 15 ( `a_neutral ← #neutral+.` )?
     - Q2.2 Quelle est la significiation de la ligne 17 (`a_negative ← not,?*:3,#positive.`)?
     - Q2.3 Quelle règle permet de capturer la séquence suivante “lemon chicken with almonds from the US”. Expliquez-la.
-- **Q3 :** Au vu des questions précédentes, expliquez ce qui permet de faire un objet de type _annotator_ en Tamgu
+- **Q3 :** Expliquez ce qui permet de définir un objet de type _annotator_ en Tamgu et de le faire fonctionner.
 
 Nous allons désormais essayer de faire un système équivalent pour des critiques de restaurant
 écrites en français. Nous vous fournissons une structure de code dans le fichier _rules_french.zip._
 Contrairement au programme _rules.tmg_ , notre programme devra lire les critiques utilisateurs à partir
 d’un fichier texte ( _data_semeval_french_train.txt_ )
 
-- **Q4 :** Ouvrez le fichier _utils.tmg_
-    Écrivez une fonction readFile qui prend comme argument d’entrée un chemin vers un fichier
-    et renvoie une table de hashage (équivalent à un dictionnaire en Python) ayant pour clef
-    l’identifiant de l’avis client et pour valeur le texte de l’avis client.
+- **Q4 :** Ouvrez le fichier _utils.tmg_. Écrivez une fonction readFile qui prend comme argument d’entrée un chemin vers un fichier et renvoie une table de hashage (équivalent à un dictionnaire en Python) ayant pour clef l’identifiant de l’avis client et pour valeur le texte de l’avis client. Pour écrire une tel fonction, il vous suffit de réorganiser les lignes suivantes dans le bon ordre:
+
+    ```java
+    map reviews;
+    split_line = line.split("\t");
+    for (line in f){
+    string line;
+    function readFile(string fn){
+    svector split_line;  
+    f.openread(fn);
+    }
+    reviews[split_line[0]] = split_line[1];
+    }
+    file f;
+    return reviews;
+    f.close();
+    line = line.trim();
+    ```
 
 > Vérifiez que votre code fonctionne en lançant le programme `rules_french.tmg` avec les data _semeval_. Vous devriez voir s’afficher l’identifiant de l’avis client puis l’avis client sur les lignes suivantes (comme dans la figure suivante)
 
@@ -110,11 +123,14 @@ d’un fichier texte ( _data_semeval_french_train.txt_ )
 - **Q9 :** Notre annotateur est plutôt basique et l’on aimerait qu’il annote de manière un peu plus intelligente. En effet, dans la phrase suivante “ _Du surgelé mais du surgelé pas bon_ ”, “ _bon_ ” sera annoté comme positif. Modifiez les règles d’annotation dans _annotation_rules_french.tmg_ pour faire en sorte que cela n’arrive pas. Pensez aussi au fait qu’éventuellement plusieurs mots peuvent être entre “ _pas_ ” et “ _bon_ ” comme dans “pas _très_ bon”.
 
 - **Q10 :** Faites en sorte que votre programme puisse également repérer les mots relatifs aux entités Nourriture, Boisson, Service et Ambiance et qu’il repère des attributs relatifs au Prix et à la Qualité. Pour cela, rajoutez le vocabulaire nécessaire dans _lexicon_french.tmg_ , les règles nécessaires dans _annotation_rules_french.tmg_ et un annotateur dans le fichier _rules_french.tmg._ A vous de définir au mieux le vocabulaire et les règles pour capturer un maximum d’éléments.
-- **Q11 :** Pour l’instant l’annotation est faite à l’échelle du texte entier ce qui n’est pas idéal pour retrouver les triplets. Nous allons donc séparer le texte de l’utilisateur en phrases et passer celle-ci une à une à l’annotateur. De la sorte, nous auront une sortie relativement proche des triplets désirés (même si les sorties ne seront pas explicitement des triplets). Pour éviter au maximum les erreurs, nous allons nous servir des capacités de tokenisation du transducteur gérant le vocabulaire.
-  - Q11.1 Faites tokenizer le texte par le transducteur et affichez les tokens. Parfois, certains éléments de la liste de retour sont constitués de deux éléments (comme ['restaurant','restaurer'] ou ['du','de'] ou bien encore ['typiques','typique']). A quoi correspond le premier élément? A quoi correspond le second?
-  - Q11.2 Quel est l’avantage d’utiliser le tokenizeur du transducteur plutôt que de faire une tokenization naïve sur les espaces? Regardez comment sont traitées les séquences de mots “en permanence” et “pomme de terre”. Combien de tokens a-t-on pour ces séquences là? Combien en aurait-on eu avec une tokenization naïve?
-  - Q11.3 Reconstituez des phrases à partir des tokens en considérant les caractères de ponctuation comme des fins de phrases. Quels caractères de ponctuation avez-vous sélectionnés?
-- **Q12** Modifiez le lexique et les règles de sorte d’obtenir les meilleurs triplets par phrase. Une fois que vous pensez avoir fini, testez votre programme sur le fichier _./data/data_semeval_french_test.txt_.
+
+- **Q11 :**  Pour éviter au maximum les erreurs, nous allons nous servir des capacités de tokenisation du transducteur gérant le vocabulaire.
+  - **Q11.1** Faites tokenizer le texte par le transducteur et affichez les tokens. Parfois, certains éléments de la liste de retour sont constitués de deux éléments (comme ['restaurant','restaurer'] ou ['du','de'] ou bien encore ['typiques','typique']). A quoi correspond le premier élément? A quoi correspond le second?
+  - **Q11.2** Quel est l’avantage d’utiliser le tokenizeur du transducteur plutôt que de faire une tokenization naïve sur les espaces? Regardez comment sont traitées les séquences de mots “en permanence” et “pomme de terre”. Combien de tokens a-t-on pour ces séquences là? Combien en aurait-on eu avec une tokenization naïve?
+
+- **Q12 [Optionnel]** Pour l’instant l’annotation est faite à l’échelle du texte entier ce qui n’est pas idéal pour retrouver les triplets. Nous allons donc séparer le texte de l’utilisateur en phrases et passer celle-ci une à une à l’annotateur. De la sorte, nous auront une sortie relativement proche des triplets désirés (même si les sorties ne seront pas explicitement des triplets). Pour ce faire, reconstituez des phrases à partir des tokens obtenus avec le transducteur en considérant les caractères de ponctuation comme des fins de phrases. Quels caractères de ponctuation avez-vous sélectionnés?
+
+- **Q12 [Optionnel]** Modifiez le lexique et les règles de sorte d’obtenir les meilleurs triplets par phrase. Une fois que vous pensez avoir fini, testez votre programme sur le fichier _./data/data_semeval_french_test.txt_.
 
 ## CR
-Vous rendrez votre TP sous forme d’un fichier ZIP contenant l’ensemble de votre programme fonctionnel ainsi qu’un fichier _sortie_test.txt_ contenant les sorties de votre programme sur le fichier de test.
+Vous rendrez votre TP sous forme d'un fichier _tp_tamgu_nom1_nom2.pdf_ avec l'enseble de vos réponses et justifications (copier et coller le code pour chaque question et une capture d'écran du terminal contenant le résultat obtenu.). Coomprimez ce fichier dans un ZIP contenant aussi l’ensemble de votre programme fonctionnel ainsi qu’un fichier _sortie_test.txt_ contenant les sorties de votre programme sur le fichier de test.

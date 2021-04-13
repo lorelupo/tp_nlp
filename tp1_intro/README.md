@@ -1,6 +1,18 @@
+---
+published-on: 2021
+title: Utilisation de commandes Unix pour l'analyse de documents textuels &amp; introduction à UNICODE
+---
+
 # Utilisation de commandes Unix pour l'analyse de documents textuels &amp; introduction à UNICODE
 
-> Une partie de ce TP est très largement inspiré de "Unix for Poets" de Kenneth Ward Church, IBM Research. _Adapté par Laurent Besacier et Carlos Ramisch_
+<table width="1000" cellspacing="0" cellpadding="2" border="0" align="center">
+
+<tbody>
+
+<tr>
+
+<td>
+
 
 Programme
 ---------
@@ -280,3 +292,15 @@ Convertir le fichier _testFR.txt.utf8_ en UTF-16 avec `iconv`. Visualiser le cha
 - **Q1** : À quoi correspondent les deux premiers octets dans le fichier converti en UTF-16 ? (attention, ce n'est pas un charactère)
 -  **Q2** : Quelle est la correspondance entre les codes point Unicode et leur représentation en UTF-16 ?
 -  **Q3** : Essayez maintenant de réaliser la conversion vers UTF-16BE. Quelle est la différence entre cet encodage et UTF-16 ?
+
+</td>
+
+Une partie de ce TP est très largement inspiré de "Unix for Poets" de Kenneth Ward Church, IBM Research. _Adapté par Laurent Besacier et Carlos Ramisch_
+
+</tr>
+
+
+
+</tbody>
+
+</table>

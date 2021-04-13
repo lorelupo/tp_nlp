@@ -56,7 +56,7 @@ Lancer l’entraînement d’un modèle avec la commande suivante :
 - **Q6** : A quoi correspond la valeur ‘ppl’ affichée par le script ? Vaut-il mieux que cette valeur soit faible ou élevée à la fin de l’apprentissage ? Pourquoi ? Même question pour ‘acc’. Le code qui permet de calculer ces variables se trouve dans le fichier [statistics.py](https://github.com/OpenNMT/OpenNMT-py/blob/master/onmt/utils/statistics.py) de OpenNMT-py.
 
 - **Q7** : Ouvrez le fichier de configuration _config-base.yaml_ et observez son contenu.
-Dites à quoi correspondent les paramètres suivants (vous pouvez utiliser internet pour vous aider):
+Décrivez en détail à quoi correspondent les paramètres suivants (vous pouvez utiliser internet pour vous aider):
   - train_step
   - valid_step
   - enc_layers
