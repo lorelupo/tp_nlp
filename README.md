@@ -8,9 +8,9 @@
 
 # Dates
 
-- 19 Gen 2022, Mer, 9:45AM – 1PM
-- 26 Gen 2022, Mer, 9:45AM – 1PM
-- 2 Feb 2022, Mer, 9:45AM – 1PM
-- 9 Feb 2022, Mer, 9:45AM – 1PM
-- 16 Feb 2022, Mer, 9:45AM – 1PM
-- 2 Mar 2022, Mer, 9:45AM – 1PM
+- 19 Gen 2022, Mer, 9:45AM – 1PM  (**TP INTRO**)
+- 26 Gen 2022, Mer, 9:45AM – 1PM (**TP TAMGU**)
+- 2 Feb 2022, Mer, 9:45AM – 1PM (**TP TAMGU**)
+- 9 Feb 2022, Mer, 9:45AM – 1PM (**TP TAMGU**)
+- 16 Feb 2022, Mer, 9:45AM – 1PM (**TP TAMGU**)
+- 2 Mar 2022, Mer, 9:45AM – 1PM (**Corrections**)
