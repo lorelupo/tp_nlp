@@ -13,6 +13,10 @@ title: Utilisation de commandes Unix pour l'analyse de documents textuels &amp; 
 
 <td>
 
+## À rendre
+
+Vous rendrez votre TP sous forme d'un fichier PDF `tp_intro_nom1_nom2.pdf` contenant le réponses à chaque question.
+Pour chaque exercice, en plus de répondre aux questions, expliquez aussi quelle est la séquence de commandes utilisées et montrez un extrait du résultat à l'aide des commandes `head` et/ou `less`
 
 Programme
 ---------
@@ -66,14 +70,6 @@ Par défaut, la plupart des outils lit les entrées (stdin) à partir du clavier
 --------
 
 **Fichier pour les exercices** : [RADIOS.txt](./RADIOS.txt). Ce fichier contient des transcriptions d'enregistrements radiophoniques : France inter, RFI, ...
-
-Pour chaque exercice, en plus de répondre aux questions, expliquez aussi quelle est la séquence de commandes utilisées et montrer un extrait du résultat à l'aide des commandes `head` et/ou `less`
-
-----
-
-## À rendre
-
-Vous rendrez votre TP sous forme d'un fichier PDF `tp_intro_nom1_nom2.pdf` contenant le réponses à chaque question.
 
 ----
 
@@ -295,7 +291,7 @@ Convertir le fichier _testFR.txt.utf8_ en UTF-16 avec `iconv`. Visualiser le cha
 
 </td>
 
-Une partie de ce TP est très largement inspiré de "Unix for Poets" de Kenneth Ward Church, IBM Research. _Adapté par Laurent Besacier et Carlos Ramisch_
+> Une partie de ce TP est très largement inspiré de "Unix for Poets" de Kenneth Ward Church, IBM Research, et adaptée par Laurent Besacier, Carlos Ramisch_ et Lorenzo Lupo.
 
 </tr>
 
