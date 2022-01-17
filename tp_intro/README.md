@@ -105,7 +105,7 @@ Exemples (voir la page `man` de `sort`):
 |`sort -f`| ignorer majuscules/minuscules|
 |`sort -n`| ordre numérique|
 |`sort -nr`| ordre numérique inversé|
-|`sort -k 1`| commencer au champ 1 (le premier est le champ 0)|
+|`sort -k 1`| commencer au champ 1 (le premier est le champ 1)|
 |`sort -k 0.50`| commencer au 50e caractère|
 |`sort -k 1.5`| commencer au 5e caractère du champ 1|
 
@@ -118,10 +118,7 @@ Exemples (voir la page `man` de `sort`):
 ### Exercice 3
 **--- Trouver et compter les n-grammes du texte RADIOS.txt**
 
-- Entrée : fichier texte RADIOS.txt
-- Sortie : fichier de statistiques où chaque ligne est de la forme "mot1 mot2 nb"
-
-Faire la même chose pour les n-grammes (n=2,3,4).
+Pour chaque n-gramme, avec n=2,3,4, générer un fichier de statistiques où chaque ligne est de la forme "mot1 mot2 nb" pour les bi-grammes, "mot1 mot2 mot3 nb" pour les tri-grammes, etc.s
 
 - **Q1** : Combien de fois le 2-gramme "il est" apparaît dans ce texte ?
 - **Q2** : Combien de 3-grammes distincts sont trouvés dans ce texte ?
@@ -169,8 +166,8 @@ Avec expressions régulières:
 
 **Note** : outils différents (`grep`, `sed`, etc.) ont différents caractères d'échappement (e.g. `;'"#$&*?[]<>{}\`). Pour utiliser ces caractères dans des regex, il faut placer `\` avant. E.g. `\{` pour utiliser `{`.
 
-- **Q1** : Combien y a-t-il de mots de 9 lettres dans RADIOS.txt ?
-- **Q2** :  Combien y a-t-il des mots sans voyelle dans RADIOS.txt ?
+- **Q1** : Combien y a-t-il de mots uniques de 9 lettres dans RADIOS.txt ?
+- **Q2** :  Combien y a-t-il des mots uniques sans voyelle dans RADIOS.txt ?
 
 ### Exercice 5 [Optionnel]
 **--- Langage `awk`**
