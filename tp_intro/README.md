@@ -242,7 +242,7 @@ Questions :
 
 - **Q1** : Pourquoi certains fichiers s'affichent comme des symboles étranges au lieu du texte ?
 
-- **Q2** : Pourquoi certains textes s'affichent correctement même quand on choisit un encodage de caractères différent de celui dans lequel le texte est enregistré (par exemple, essayez d'afficher testFR.txt.utf8 avec l'encodage "Turkish Windows-1254") ?
+- **Q2** : Pourquoi certains charactères s'affichent correctement même quand on choisit un encodage de caractères différent de celui dans lequel le texte est enregistré (par exemple, essayez d'afficher testFR.txt.utf8 avec l'encodage "Turkish Windows-1254") ?
 
 
 ### Exercice 9
