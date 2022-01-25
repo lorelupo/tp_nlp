@@ -6,7 +6,7 @@
 
 Ce TP est basé sur le language de programmation [Tamgu]([Optionnel]), à installer sur votre machine avant de commencer. En cas de problème dans l'installation, référez-vous à la [documentation disponible](https://github.com/naver/tamgu/blob/master/README.md#compiling).
 
-1) Téléchargez et compilez Tamgu
+### 1. Téléchargez et compilez Tamgu
 
 ````
 git clone https://github.com/naver/tamgu.git
@@ -16,7 +16,29 @@ make all
 make libs
 ````
 
-2) Ajoutez les lignes suivantes dans votre bashrc (`~/.bashrc`) en remplaçant `/home/me/tamgu/bin/linux` par le
+**Aide**:
+
+Si vous avez une erreur qui parle d'une librairie boost regex, essayez :
+    - `sudo apt-get install libboost-regex1.67.0`
+    - `sudo apt-get install libboost-all-dev`
+    - `sudo apt-get install libboost-regex-dev` va installer beaucoup de choses pas forcément nécessaires avec all 
+
+- Si erreur "include <python.h>", essayez:
+    - `sudo apt-get install python-dev`
+    - `sudo apt-get install python3-dev`
+
+    ensuite `python install.py`, à nouveau, etc.
+
+    Si le problème persiste c'est probablement parce que il faut donner le bon chemin vers la version python que vous utilisez: vous pouvez specifier le chemin avec l'argument `-pythoninclude` :
+    ```
+    python install.py -pythoninclude /usr/include/python3.8/
+    make all
+    make libs
+    ```
+
+### 2. Modifiez votre .bashrc
+
+Ajoutez les lignes suivantes dans votre bashrc (`~/.bashrc`) en remplaçant `/home/me/tamgu/bin/linux` par le
 chemin d'installation sur votre machine:
 
 ```
@@ -25,9 +47,12 @@ export LD_LIBRARY_PATH=$TAMGULIBS:$LD_LIBRARY_PATH
 export PATH=$TAMGULIBS:$PATH
 ```
 
+Puis exécutez la commande suivante: `source ~/.bashrc`
+
 **Aide**: vous pouvez imprimer en ligne de commande le répertoire de travail actuel en tapant `pwd`, vous pouvez éditer un fichier en utilisant  `gedit myfile` or `vi myfile`.
 
-3) Puis exécutez la commande suivante: `source ~/.bashrc`
+
+### 3. Test
 
 Si tout fonctionne correctement il vous suffit de taper `tamgu` pour lancer Tamgu dans votre console.
 
