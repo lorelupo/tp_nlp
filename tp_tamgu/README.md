@@ -1,7 +1,5 @@
 # TP Analyse de sentiments avec Tamgu
 
-----
-
 ## Installation de TAMGU
 
 Ce TP est basé sur le language de programmation [Tamgu]([Optionnel]), à installer sur votre machine avant de commencer. En cas de problème dans l'installation, référez-vous à la [documentation disponible](https://github.com/naver/tamgu/blob/master/README.md#compiling).
@@ -56,7 +54,9 @@ Puis exécutez la commande suivante: `source ~/.bashrc`
 
 Si tout fonctionne correctement il vous suffit de taper `tamgu` pour lancer Tamgu dans votre console.
 
-----
+## CR
+
+Vous rendrez votre TP sous forme d'un fichier _tp_tamgu_nom1_nom2.pdf_ avec l'enseble de vos réponses et justifications (copier et coller le code pour chaque question et une capture d'écran du terminal contenant le résultat obtenu.). Coomprimez ce fichier dans un ZIP contenant aussi l’ensemble de votre programme fonctionnel ainsi qu’un fichier _sortie_test.txt_ contenant les sorties de votre programme sur le fichier de test.
 
 ## TP
 
@@ -106,7 +106,7 @@ Pensez à consulter la documentation de Tamgu pour répondre au mieux aux questi
 - **Q3 :** Expliquez ce qui permet de définir un objet de type _annotator_ en Tamgu et de le faire fonctionner.
 
 Nous allons désormais essayer de faire un système équivalent pour des critiques de restaurant
-écrites en français. Nous vous fournissons une structure de code dans le fichier _rules_french.zip._
+écrites en français. Nous vous fournissons une structure de code dans le répertoire _rules_french/_
 Contrairement au programme _rules.tmg_ , notre programme devra lire les critiques utilisateurs à partir
 d’un fichier texte ( _data_semeval_french_train.txt_ )
 
@@ -156,6 +156,3 @@ d’un fichier texte ( _data_semeval_french_train.txt_ )
 - **Q12 [Optionnel]** Pour l’instant l’annotation est faite à l’échelle du texte entier ce qui n’est pas idéal pour retrouver les triplets. Nous allons donc séparer le texte de l’utilisateur en phrases et passer celle-ci une à une à l’annotateur. De la sorte, nous auront une sortie relativement proche des triplets désirés (même si les sorties ne seront pas explicitement des triplets). Pour ce faire, reconstituez des phrases à partir des tokens obtenus avec le transducteur en considérant les caractères de ponctuation comme des fins de phrases. Quels caractères de ponctuation avez-vous sélectionnés?
 
 - **Q12 [Optionnel]** Modifiez le lexique et les règles de sorte d’obtenir les meilleurs triplets par phrase. Une fois que vous pensez avoir fini, testez votre programme sur le fichier _./data/data_semeval_french_test.txt_.
-
-## CR
-Vous rendrez votre TP sous forme d'un fichier _tp_tamgu_nom1_nom2.pdf_ avec l'enseble de vos réponses et justifications (copier et coller le code pour chaque question et une capture d'écran du terminal contenant le résultat obtenu.). Coomprimez ce fichier dans un ZIP contenant aussi l’ensemble de votre programme fonctionnel ainsi qu’un fichier _sortie_test.txt_ contenant les sorties de votre programme sur le fichier de test.
