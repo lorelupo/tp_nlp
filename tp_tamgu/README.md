@@ -33,6 +33,7 @@ Si vous avez une erreur qui parle d'une librairie boost regex, essayez :
     make all
     make libs
     ```
+Si vous recontrez toujours des erreurs de "boost" avec `make libs`, effacez le repertoire tamgu et repetez la procedure d'installation (clone tamgu, ...).
 
 ### 2. Modifiez votre .bashrc
 
