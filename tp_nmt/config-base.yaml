@@ -41,8 +41,8 @@ train_steps: 2000
 valid_steps: 625
 
 # GPU (à décommenter si vous voulez utiliser votre carte graphique)
-world_size: 1
-gpu_ranks: [0]
+# world_size: 1
+# gpu_ranks: [0]
 
 # LOG & TENSORBOARD
 report_every: 20

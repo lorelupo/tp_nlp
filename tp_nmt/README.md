@@ -1,7 +1,13 @@
 # TP NMT
 
-Ce TP va vous initier aux outils de traduction automatique neuronaux et vous propose d’entraîner un modèle de traduction très simple sur un jeu de données réduit et de l’évaluer. Pour ce faire nous vous fournissons un fichier de configuration minimal et relativement peu performant (_config-base.yaml_). La partie la plus chronophage de ce TP sera de faire évoluer le fichier de configuration pour apprendre des modèles qui soient plus performants. Les temps d’entraînement d’un modèle de traduction peuvent être relativement long si les calculs sont effectués sur le CPU uniquement, ainsi, si vous le pouvez et disposez d’une carte GPU NVIDIA, vous pouvez installer [CUDA](https://developer.nvidia.com/cuda-zone
-), ce qui accélérera sensiblement le temps d’entraînement. Autrement, vous pouvez utilizer une GPU sur Google Colab, comme vous aviez fait dans le TP3-BERT.
+Ce TP va vous initier aux outils de traduction automatique neuronaux et vous propose d’entraîner un modèle de traduction très simple sur un jeu de données réduit et de l’évaluer. Pour ce faire nous vous fournissons un fichier de configuration minimal et relativement peu performant (_config-base.yaml_). La partie la plus chronophage de ce TP sera de faire évoluer le fichier de configuration pour apprendre des modèles qui soient plus performants. Les temps d’entraînement d’un modèle de traduction peuvent être relativement long si les calculs sont effectués sur le CPU uniquement. Ainsi, vous pouvez utilizer une GPU sur Google Colab ou, si vous disposez d’une carte GPU NVIDIA sur votre machine, vous pouvez installer [CUDA](https://developer.nvidia.com/cuda-zone
+), ce qui accélérera sensiblement le temps d’entraînement.
+
+## Pour utiliser une GPU sur Google Colab
+
+- Inscrivez-vous à Google Colab (si vous n'avez pas déjà de compte Google) et demandez l’accès.
+- Vous pouvez ouvrir un nouveau fichier Colab depuis [votre compte Google Drive](https://drive.google.com/drive/my-drive) en cliquant sur `+ New->More->Google Colaboratory`. Le fichier colab est un Jupyter Notebook qui utilise des recources computationnelles en cloud.
+- Pour activer l’utilisation de GPU pour votre notebook: `Runtime->Change runtime type->Hardware Accelerator->GPU` .
 
 ## Préambule
 
@@ -23,12 +29,21 @@ Installez OpenNMT-py à l’aide de pip : `pip install OpenNMT-py`
   mkdir $mydir
   echo "blabla" > $mydir/myfile.txt
   ```
+### Resources
+
+Pour répondre aux questions théoriques, vous pouvez vous appuyer sur les slides du cours, mais aussi plein d'information accessibles gratuitement sur internet. Entre autre:
+
+- Livre de référence sur le deep learning: https://www.deeplearningbook.org/
+- Site web avec beaucoup de notions de ML expliquées simplement et avec exemples: https://machinelearningmastery.com/blog/
+- Introduction à la NMT : https://towardsdatascience.com/neural-machine-translation-15ecf6b0b
+- Tutoriel plus détaillé sur la NMT : https://arxiv.org/abs/1703.01619 
+- wikipedia, stack overflow, etc.
 
 ## Préparation des données
 
 - **Q1** : Que contiennent les fichiers _IWSLT10_BTEC.train.en.txt_ et _IWSLT10_BTEC.train.fr.txt_ ?
-- **Q2** : Pour chacun des fichiers dans les répertoires train, dev et test, exécutez la commande suivante : `cat file_in.txt | awk -F '\' '{print $NF}' > file_out.clean.txt`. Pour chaque fichier clean créé, exécutez la commande suivante (en changeant LANG par en ou fr selon la langue dans laquelle est le fichier) : `tokenizer.perl -l LANG -lc < ./file_in.LANG.clean.txt > file_out.LANG.tok.txt`. Quelles différences voyez-vous entre les fichiers _.clean.txt_ et _.tok.txt_ ? Quel est l’intérêt de l’opération effectuée ?
-- **Q3** : Pourquoi avoir un corpus séparé en 3 parties (train, dev et val) ? A quoi vont servir chacun de ces fichiers ?
+- **Q2** : Pour chacun des fichiers dans les répertoires train, dev et test, exécutez la commande suivante : `awk -F '\' '{print $NF}' file_int.txt > file_out.clean.txt`. Pour chaque fichier clean créé, exécutez la commande suivante (en changeant LANG par en ou fr selon la langue dans laquelle est le fichier) : `tokenizer.perl -l LANG -lc < ./file_in.LANG.clean.txt > file_out.LANG.tok.txt`. Quelles différences voyez-vous entre les fichiers _.clean.txt_ et _.tok.txt_ ? Quel est l’intérêt de l’opération effectuée ?
+- **Q3** : Pourquoi avoir un corpus séparé en 3 parties (train, dev et test) ? A quoi vont servir chacun de ces fichiers ? (Note: bien expliquer la différence d'utilisation entre dev et test et la raison de cela)
 
 ## Création d’un modèle de TA
 
@@ -53,10 +68,10 @@ Lancer l’entraînement d’un modèle avec la commande suivante :
 
 `onmt_train -config config-base.yaml`
 
-- **Q6** : A quoi correspond la valeur ‘ppl’ affichée par le script ? Vaut-il mieux que cette valeur soit faible ou élevée à la fin de l’apprentissage ? Pourquoi ? Même question pour ‘acc’. Le code qui permet de calculer ces variables se trouve dans le fichier [statistics.py](https://github.com/OpenNMT/OpenNMT-py/blob/master/onmt/utils/statistics.py) de OpenNMT-py.
+- **Q6** : A quoi correspond la valeur ‘acc’ affichée par le script ? Vaut-il mieux que cette valeur soit faible ou élevée à la fin de l’apprentissage ? Pourquoi ? Même question pour ‘ppl’. Le code qui permet de calculer ces variables se trouve dans le fichier [statistics.py](https://github.com/OpenNMT/OpenNMT-py/blob/master/onmt/utils/statistics.py) de OpenNMT-py.
 
 - **Q7** : Ouvrez le fichier de configuration _config-base.yaml_ et observez son contenu.
-Décrivez en détail à quoi correspondent les paramètres suivants (vous pouvez utiliser internet pour vous aider):
+Décrivez en détail à quoi correspondent les paramètres suivants (n'hésitez pas à demander a Google!):
   - train_step
   - valid_step
   - enc_layers
@@ -76,7 +91,7 @@ En pratique, il n’est pas possible d’évaluer les traductions manuellement, 
 
 - **Q8** : Entre quelle valeur et quelle valeur est compris un score BLEU ? Vaut-il mieux que la valeur obtenue soit élevée ou faible ? Pourquoi ?
 
-- **Q9** : Calculer un score BLEU pour chacun des modèles intermédiaires. Quelle modèle à le meilleur score BLEU ?
+- **Q9** : Calculer un score BLEU pour chacun des modèles intermédiaires. Quel modèle a le meilleur score BLEU ?
 
 ## Optimisation des paramètres
 
@@ -88,8 +103,8 @@ Aussi, veillez à sauvegarder les modèles appris avec des configurations diffé
 
 Plusieurs paramètres peuvent être changés afin d’obtenir de meilleurs traduction, par example:
 
-- **Q10 - nombre de training steps** : Augmenter le nombre de steps permet-il d’obtenir un meilleur score BLEU ? Jusqu’à combien
-de steps ? comment utiliser l'option `early_stopping` ([voir ici](https://opennmt.net/OpenNMT-py/options/train.html)) pour trouver le nombre optimal de steps ?
+- **Q10 - nombre de training steps** : Augmenter le nombre de steps permet-il d’obtenir un meilleur score BLEU ? Pourquoi? Jusqu’à combien
+de steps ? comment utiliser l'option `early7.2.3_stopping` ([voir ici](https://opennmt.net/OpenNMT-py/options/train.html)) pour trouver le nombre optimal de steps ?
 
 - **Q11 - nombre de couches** : Augmentez le nombre de couches de l’encodeur et du décodeur (n’allez pas au delà de 3 couches). Cela permet-il toujours d’obtenir des meilleurs résultats ? Pourquoi ?
 
