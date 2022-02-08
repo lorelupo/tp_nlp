@@ -1,5 +1,6 @@
 # TP NMT
 
+<<<<<<< HEAD
 Ce TP va vous initier aux outils de traduction automatique neuronaux et vous propose d’entraîner un modèle de traduction très simple sur un jeu de données réduit et de l’évaluer. Pour ce faire nous vous fournissons un fichier de configuration minimal et relativement peu performant (_config-base.yaml_). La partie la plus chronophage de ce TP sera de faire évoluer le fichier de configuration pour apprendre des modèles qui soient plus performants. Les temps d’entraînement d’un modèle de traduction peuvent être relativement long si les calculs sont effectués sur le CPU uniquement. Ainsi, vous pouvez utilizer une GPU sur Google Colab ou, si vous disposez d’une carte GPU NVIDIA sur votre machine, vous pouvez installer [CUDA](https://developer.nvidia.com/cuda-zone
 ), ce qui accélérera sensiblement le temps d’entraînement.
 
@@ -8,6 +9,10 @@ Ce TP va vous initier aux outils de traduction automatique neuronaux et vous pro
 - Inscrivez-vous à Google Colab (si vous n'avez pas déjà de compte Google) et demandez l’accès.
 - Vous pouvez ouvrir un nouveau fichier Colab depuis [votre compte Google Drive](https://drive.google.com/drive/my-drive) en cliquant sur `+ New->More->Google Colaboratory`. Le fichier colab est un Jupyter Notebook qui utilise des recources computationnelles en cloud.
 - Pour activer l’utilisation de GPU pour votre notebook: `Runtime->Change runtime type->Hardware Accelerator->GPU` .
+=======
+Ce TP va vous initier aux outils de traduction automatique neuronale et vous propose d’entraîner un modèle de traduction très simple sur un jeu de données réduit et de l’évaluer. Pour ce faire nous vous fournissons un fichier de configuration minimal et relativement peu performant (_config-base.yaml_). La partie la plus chronophage de ce TP sera de faire évoluer le fichier de configuration pour apprendre des modèles qui soient plus performants. Les temps d’entraînement d’un modèle de traduction peuvent être relativement long si les calculs sont effectués sur le CPU uniquement, ainsi, si vous le pouvez et disposez d’une carte GPU NVIDIA, vous pouvez installer [CUDA](https://developer.nvidia.com/cuda-zone
+), ce qui accélérera sensiblement le temps d’entraînement. Autrement, vous pouvez utilizer une GPU sur Google Colab, comme vous aviez fait dans le TP3-BERT.
+>>>>>>> dd94764f850d90ebbe0be2624c1a853da3b3486a
 
 ## Préambule
 
