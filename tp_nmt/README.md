@@ -91,7 +91,9 @@ En pratique, il n’est pas possible d’évaluer les traductions manuellement, 
 
 - **Q8** : Entre quelle valeur et quelle valeur est compris un score BLEU ? Vaut-il mieux que la valeur obtenue soit élevée ou faible ? Pourquoi ?
 
-- **Q9** : Pour chacun des modèles intermédiaires, calculer un score BLEU à l'aide du script `multi-bleu.perl` (usage: `perl multi-bleu.perl /path/to/reference/translations < /path/to/model/predictions`). Quel modèle a le meilleur score BLEU ?
+- **Q9** : Pour chacun des modèles intermédiaires, calculer un score BLEU à l'aide du script `multi-bleu.perl`. Quel modèle a le meilleur score BLEU ?
+
+> Usage script: `perl multi-bleu.perl /path/to/reference/translations < /path/to/model/predictions`. Par exemple: `perl multi-bleu.perl BTEC-en-fr/test/IWSLT09_BTEC.testset.en.tok.txt < models/base/pred.txt`.
 
 ## Optimisation des paramètres
 
