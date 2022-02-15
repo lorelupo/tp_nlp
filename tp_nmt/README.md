@@ -44,7 +44,7 @@ Pour répondre aux questions théoriques, vous pouvez vous appuyer sur les slide
 ## Préparation des données
 
 - **Q1** : Que contiennent les fichiers _IWSLT10_BTEC.train.en.txt_ et _IWSLT10_BTEC.train.fr.txt_ ?
-- **Q2** : Pour chacun des fichiers dans les répertoires train, dev et test, exécutez la commande suivante : `awk -F '\' '{print $NF}' file_int.txt > file_out.clean.txt`. Pour chaque fichier clean créé, exécutez la commande suivante (en changeant LANG par en ou fr selon la langue dans laquelle est le fichier) : `tokenizer.perl -l LANG -lc < ./file_in.LANG.clean.txt > file_out.LANG.tok.txt`. Quelles différences voyez-vous entre les fichiers _.clean.txt_ et _.tok.txt_ ? Quel est l’intérêt de l’opération effectuée ?
+- **Q2** : Pour chacun des fichiers dans les répertoires train, dev et test, exécutez la commande suivante : `awk -F '\' '{print $NF}' file_int.txt > file_out.clean.txt`. Pour chaque fichier clean créé, exécutez la commande suivante (en changeant LANG par en ou fr selon la langue dans laquelle est le fichier) : `perl tokenizer.perl -l LANG -lc < ./file_in.LANG.clean.txt > file_out.LANG.tok.txt`. Quelles différences voyez-vous entre les fichiers _.clean.txt_ et _.tok.txt_ ? Quel est l’intérêt de l’opération effectuée ?
 - **Q3** : Pourquoi avoir un corpus séparé en 3 parties (train, dev et test) ? A quoi vont servir chacun de ces fichiers ? (Note: bien expliquer la différence d'utilisation entre dev et test et la raison de cela)
 
 ## Création d’un modèle de TA
@@ -64,9 +64,8 @@ http://opennmt.net/OpenNMT-py/index.html
   [...] Counters tgt:8194
   ````
 
-Éditez le fichier config-base.yml et changez le chemin indiqué pour _data_ de sorte qu’il pointe vers le répertoire vers où se trouvent les données préprocessées. Pour _save_model_, indiquez le chemin vers lequel vous souhaitez sauvegarder les modèles de traduction.
 
-Lancer l’entraînement d’un modèle avec la commande suivante :
+Verifiez que les chemins dans le fichier config-base.yml sont bons et ensuite lancez l’entraînement d’un modèle avec la commande suivante :
 
 `onmt_train -config config-base.yaml`
 
