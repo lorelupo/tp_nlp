@@ -62,9 +62,8 @@ http://opennmt.net/OpenNMT-py/index.html
   [...] Counters tgt:8194
   ````
 
-Éditez le fichier config-base.yml et changez le chemin indiqué pour _data_ de sorte qu’il pointe vers le répertoire vers où se trouvent les données préprocessées. Pour _save_model_, indiquez le chemin vers lequel vous souhaitez sauvegarder les modèles de traduction.
 
-Lancer l’entraînement d’un modèle avec la commande suivante :
+Verifiez que les chemins dans le fichier config-base.yml sont bons et ensuite lancez l’entraînement d’un modèle avec la commande suivante :
 
 `onmt_train -config config-base.yaml`
 
