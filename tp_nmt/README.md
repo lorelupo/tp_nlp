@@ -1,13 +1,15 @@
 # TP NMT
 
 Ce TP va vous initier aux outils de traduction automatique neuronaux et vous propose d’entraîner un modèle de traduction très simple sur un jeu de données réduit et de l’évaluer. Pour ce faire nous vous fournissons un fichier de configuration minimal et relativement peu performant (_config-base.yaml_). La partie la plus chronophage de ce TP sera de faire évoluer le fichier de configuration pour apprendre des modèles qui soient plus performants. Les temps d’entraînement d’un modèle de traduction peuvent être relativement long si les calculs sont effectués sur le CPU uniquement. Ainsi, vous pouvez utilizer une GPU sur Google Colab ou, si vous disposez d’une carte GPU NVIDIA sur votre machine, vous pouvez installer [CUDA](https://developer.nvidia.com/cuda-zone
-), ce qui accélérera sensiblement le temps d’entraînement.
+), ce qui accélérera sensiblement le temps d’entraînement. La première (Colab) est vivement conseillée parce que ca vous évite d'installer du software sur votre machine locale.
 
 ## Pour utiliser une GPU sur Google Colab
 
 - Inscrivez-vous à Google Colab (si vous n'avez pas déjà de compte Google) et demandez l’accès.
 - Vous pouvez ouvrir un nouveau fichier Colab depuis [votre compte Google Drive](https://drive.google.com/drive/my-drive) en cliquant sur `+ New->More->Google Colaboratory`. Le fichier colab est un Jupyter Notebook qui utilise des recources computationnelles en cloud.
 - Pour activer l’utilisation de GPU pour votre notebook: `Runtime->Change runtime type->Hardware Accelerator->GPU` .
+
+> AIDE: Avant de commencer le TP, vous pouvez consulter les pages d'introductions [à Colab](https://colab.research.google.com/github/tensorflow/examples/blob/master/courses/udacity_intro_to_tensorflow_for_deep_learning/l01c01_introduction_to_colab_and_python.ipynb#scrollTo=YHI3vyhv5p85) et [aux Notebooks](https://realpython.com/jupyter-notebook-introduction/)
 
 ## Préambule
 
