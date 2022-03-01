@@ -2,20 +2,26 @@
 
 # Intro
 
-In this TP, we will work at the implementation of a pipeline for Neural Relation Extraction (NRE), which will make use of two fundamental pieces
+Dans ce TP, nous allons travailler à l'implémentation d'un pipeline pour l'extraction de relations neuronales, qui se basera sur deux éléments fondamentaux:
 
-1. a Named Entity Recognition (NER) system 
-2. a neural model for Relation Extraction, based on BERT
+1. un système de reconnaissance d'entités nommées (NER),
+2. un modèle neuronal pour l'extraction de relations (NRE), basé sur BERT.
 
 ## NER, NRE, what ?
 
-**NER**: locate and classify named entities mentioned in unstructured text into pre-defined categories such as person names, organizations, locations, dates, etc.:
+**NER - Named Entity Recognition**: localiser et classer les entités mentionnées dans un texte dans des catégories prédéfinies telles que des noms de personnes, des organisations, des lieux, des dates, etc :
 
 ![](ner.png)
 
-**NRE**: discovers semantic relations between entities from unstructured text using deep learning methods:
+**NRE - Neural Relation Extraction**: découvrir les relations sémantiques entre les entités d'un texte en utilisant des méthodes d'apprentissage profond :
 
 ![](nre.png)
+
+# À Rendre
+
+Chaque exercice de ce TP prévoit une réponse sous forme textuelle ou de code. Toute réponse doit être écrite dans `tp_re.ipynb`, dans une ou plusieurs cellules en dessous de l’énoncé de chaque exercice.
+
+Vous rendrez un répertoire compressé `tp_re_nom1_nom2.zip` avec le contenu du répertoire `tp_re.zip` dont le fichier `tp_re.ipynb` aura été mis à jour avec vos réponses.
 
 # Setup
 
@@ -42,9 +48,3 @@ conda install -c conda-forge notebook
 
 Maintenant, vous pouvez ouvrir `tp_re.ipynb`, il suffit de lancer la commande `jupyter notebook` dans le répertoire de travail. Si vous avez besoin d'installer d'autres libraries dans votre environment avec `pip` ou `conda`, essayez de prioriser `conda` si possible.
 
----
-## À Rendre
-
-Chaque exercice de ce TP prévoit une réponse sous forme textuelle ou de code. Toute réponse doit être écrite dans `tp_re.ipynb`, dans une ou plusieurs cellules en dessous de l’énoncé de chaque exercice.
-
-Vous rendrez un répertoire compressé `tp_re_nom1_nom2.zip` avec le contenu du répertoire `tp_re.zip` dont le fichier `tp_re.ipynb` aura été mis à jour avec vos réponses.
