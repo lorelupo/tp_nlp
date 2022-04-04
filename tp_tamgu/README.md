@@ -156,4 +156,5 @@ d’un fichier texte ( _data_semeval_french_train.txt_ )
 
 - **Q12 [Optionnel]** Pour l’instant l’annotation est faite à l’échelle du texte entier ce qui n’est pas idéal pour retrouver les triplets. Nous allons donc séparer le texte de l’utilisateur en phrases et passer celle-ci une à une à l’annotateur. De la sorte, nous auront une sortie relativement proche des triplets désirés (même si les sorties ne seront pas explicitement des triplets). Pour ce faire, reconstituez des phrases à partir des tokens obtenus avec le transducteur en considérant les caractères de ponctuation comme des fins de phrases. Quels caractères de ponctuation avez-vous sélectionnés?
 
-- **Q12 [Optionnel]** Modifiez le lexique et les règles de sorte d’obtenir les meilleurs triplets par phrase. Une fois que vous pensez avoir fini, testez votre programme sur le fichier _./data/data_semeval_french_test.txt_.
+- **Q13 [Optionnel]** Modifiez le lexique et les règles de sorte d’obtenir les meilleurs triplets par phrase. Une fois que vous pensez avoir fini, testez votre programme sur le fichier _./data/data_semeval_french_test.txt_.
+
